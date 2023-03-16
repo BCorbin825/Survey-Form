@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">HTML and CSS Knowledge Survey Form</h1>
+    <p id="description"><em>Thank you for taking the time to help us gather data on individual's knowledge of CSS and HTML</em></p>
+    <form id="survey-form">
+      <div>
+        <fieldset>
+          <!-- Name -->
+          <label id="name-label" class="required" for="name">Name 
+            <input id="name" name="name" type="text" placeholder="Enter your name" required />
+          </label>
+
+          <!-- Email -->
+          <label id="email-label" class="required" for="email">Email 
+            <input id="email" name="email" type="email" placeholder="Enter your email" required />
+          </label>
+
+          <!-- Age -->
+          <label id="number-label" class="required" for="number">Age 
+            <input id="number" type="number" name="age" min="10" max="120" placeholder="Age" required/>
+          </label>
+
+          <!-- Current role -->
+          <label class="required" for="dropdown">Which option best describes your current role?
+            <select id="dropdown" name="dropdown" required>
+              <option value="" disabled selected>Select current role</option>
+              <option value="1">Student</option>
+              <option value="2">Full Time Job</option>
+              <option value="3">Full Time Learner</option>
+              <option value="4">Prefer not to say</option>
+              <option value="5">Other</option>
+            </select>
+          </label>
+
+          <!-- Levels -->
+          <label>What is your current level of understanding of HTML and CSS?</label>
+          <label for="beginner">
+            <input id="beginner" type="radio" name="level" class="inline" value="beginner" checked/> Beginner
+          </label>
+          <label for="intermediate">
+            <input id="intermediate" type="radio" name="level" class="inline" value="intermediate"/> Intermediate
+          </label>
+          <label for="expert">
+            <input id="expert" type="radio" name="level" class="inline" value="expert"/> Expert
+          </label>
+
+          <!-- Favorite -->
+          <label id="favorite" for="dropdown">Which is your favorite?
+            <select id="dropdown" name="dropdown">
+              <option value=""  disabled selected>Select favorite</option>
+              <option value="1">HTML</option>
+              <option value="2">CSS</option>
+            </select>
+          </label>
+
+          <!-- Checkboxes -->
+          <label id="checkboxes" for="checkbox"> Which HTML elements do you frequenctly use? (Check all that apply)</label>
+          <label>
+            <input id="checkbox" type="checkbox" name="checkbox" class="inline" value="div"/> Div
+          </label>
+          <label>
+            <input id="checkbox" type="checkbox" name="checkbox" class="inline" value="section"/> Section
+          </label>
+          <label>
+            <input id="checkbox" type="checkbox" name="checkbox" class="inline" value="form"/> Form
+          </label>
+          <label>
+            <input id="checkbox" type="checkbox" name="checkbox" class="inline" value="label"/> Label
+          </label>
+          <label>
+            <input id="checkbox" type="checkbox" name="checkbox" class="inline" value="p"/> Paragraph
+          </label>
+          <label>
+            <input id="checkbox" type="checkbox" name="checkbox" class="inline" value="h"/> Headers
+          </label>
+
+          <!-- Feedback -->
+          <label id="feedback-label" for="feedback">Any comments or suggestions?
+            <textarea id="feedback" name="feedback" rows="6" placeholder="Enter your comment here..."></textarea>
+          </label>
+        </fieldset>
+      </div>
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
